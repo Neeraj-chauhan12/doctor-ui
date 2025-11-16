@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 
 const Bookin = () => {
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ const Bookin = () => {
     e.preventDefault()
     setBooked(true)
     console.log('Appointment booked:', formData)
+    toast.success("Booking successfully !")
   }
 
   const doctors = [

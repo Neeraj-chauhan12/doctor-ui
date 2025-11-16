@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -23,6 +24,7 @@ const ContactPage = () => {
     e.preventDefault()
     setSent(true)
     console.log('Contact message sent:', formData)
+    toast.success("Contact message sent successfully to doctor!")
     setTimeout(() => setSent(false), 3000)
   }
 

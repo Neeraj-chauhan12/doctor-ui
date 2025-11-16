@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 
 const AmbulanceScreen = () => {
   const [isRequested, setIsRequested] = useState(false)
 
   const handleRequestAmbulance = () => {
     setIsRequested(true)
-    alert('Ambulance requested! You will be contacted shortly.')
+    toast.success('Ambulance requested! You will be contacted shortly.')
   }
 
   return (

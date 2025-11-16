@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 
 const LoginPatient = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +22,7 @@ const LoginPatient = () => {
     e.preventDefault()
     setLoggedIn(true)
     console.log('Patient login:', formData)
+    toast.success("Doctor login succusfully 1")
   }
 
   return (
@@ -66,7 +69,7 @@ const LoginPatient = () => {
               </button>
 
               <p className="text-center text-gray-600">
-                Don't have an account? <a href="#" className="text-green-600 font-semibold hover:underline">Sign Up</a>
+                Don't have an account? <Link to="/signup-patient" className="text-green-600 font-semibold hover:underline">Signup</Link>
               </p>
             </form>
           ) : (

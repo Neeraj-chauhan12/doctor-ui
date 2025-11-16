@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 
 const AddNewMedicalForm = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,9 @@ const AddNewMedicalForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Medical form submitted:', formData)
-    alert('Medical record added successfully!')
+
+    toast.success("Medical record added successfully!")
+    setFormData(' ')
   }
 
   return (

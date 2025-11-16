@@ -19,6 +19,8 @@ import PatientProfile from './pages/PatientProfile'
 import SettingPage from './pages/SettingPage'
 import SignUpDoctor from './pages/SignUpDoctor'
 import SignUpPatiet from './pages/SignUpPatiet'
+import  { Toaster } from 'react-hot-toast';
+
 
 const App = () => {
   return (
@@ -44,7 +46,10 @@ const App = () => {
         <Route path="/signup-doctor" element={<SignUpDoctor />} />
         <Route path="/signup-patient" element={<SignUpPatiet />} />
       </Routes>
+   
+      <Toaster />
     </Router>
+    
   )
 }
 
